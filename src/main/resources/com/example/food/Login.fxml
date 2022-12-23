@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchor" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.food.HelloController">
+   <children>
+      <AnchorPane layoutX="-5.0" prefHeight="407.0" prefWidth="305.0" style="-fx-background-color: black;">
+         <children>
+            <ImageView fitHeight="257.0" fitWidth="251.0" layoutX="37.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Chef-Cartoon.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="43.0" layoutY="289.0" text="Tired of Coding?" textFill="WHITE">
+               <font>
+                  <Font name="Comic Sans MS" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="90.0" layoutY="317.0" prefHeight="31.0" prefWidth="207.0" text="Grab some Java Eats!!" textFill="WHITE">
+               <font>
+                  <Font name="Comic Sans MS" size="19.0" />
+               </font>
+            </Label>
+         </children>
+         <effect>
+            <ColorAdjust />
+         </effect></AnchorPane>
+      <AnchorPane layoutX="300.0" layoutY="-1.0" prefHeight="400.0" prefWidth="299.0">
+         <children>
+            <AnchorPane blendMode="SRC_ATOP" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="408.0" prefWidth="353.0" style="-fx-background-color: black;">
+               <children>
+                  <TextField fx:id="loginUsername" layoutX="81.0" layoutY="158.0" onMouseClicked="#makeLabelDisappear" prefHeight="27.0" prefWidth="220.0" promptText="Email" style="-fx-border-color: red; -fx-border-width: 0px 0px 2px 0px; -fx-background-color: transparent; -fx-text-fill: white;">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <cursor>
+                        <Cursor fx:constant="TEXT" />
+                     </cursor>
+                  </TextField>
+                  <PasswordField fx:id="loginPassword" layoutX="81.0" layoutY="197.0" onMouseClicked="#makeLabelDisappear" prefHeight="27.0" prefWidth="220.0" promptText="Password" style="-fx-background-color: transparent; -fx-border-color: red; -fx-border-width: 0px 0px 2px 0px; -fx-text-fill: white;">
+                     <cursor>
+                        <Cursor fx:constant="TEXT" />
+                     </cursor>
+                  </PasswordField>
+                  <Label layoutX="88.0" layoutY="56.0" text="JAVA Eats™" textFill="WHITE">
+                     <font>
+                        <Font name="Eras Bold ITC" size="33.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="247.0" layoutY="256.0" mnemonicParsing="false" onAction="#checkLogin" style="-fx-background-color: red; -fx-text-fill: white;" text="Login" textFill="RED">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Label fx:id="message" layoutX="80.0" layoutY="236.0" textFill="#cd1818" />
+                  <Hyperlink layoutX="228.0" layoutY="321.0" onAction="#changeScene" text="Sign Up" textFill="RED">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Hyperlink>
+                  <Label layoutX="79.0" layoutY="323.0" text="Don't have an account? " textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="56.0" fitWidth="68.0" layoutX="19.0" layoutY="46.0" pickOnBounds="true" smooth="false">
+                     <image>
+                        <Image url="@logo.jpg" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </children></AnchorPane>
+   </children>
+</AnchorPane>
